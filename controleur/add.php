@@ -6,10 +6,11 @@ include_once '../vue/addView.php';
 if (isset($_POST['button'])) {
     try {
         
-    $lastname = $_POST['lastname'];
-    $firstname = $_POST['firstname'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    // interprete les balises html en l'écrivant (contre les failles)
+    $lastname = htmlspecialchars($_POST['lastname']);
+    $firstname = htmlspecialchars($_POST['firstname']);
+    $email = htmlspecialchars($_POST['email']);
+    $password = htmlspecialchars($_POST['password']);
 
     $email_confirm = "SELECT * FROM users WHERE email = :email";
 

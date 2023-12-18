@@ -5,8 +5,8 @@ include_once 'connexion.php';
 // Verifier la soumission du formulaire
 if (isset($_POST['button'])) {
     try {
-        $email = $_POST['email'];
-        $password = $_POST['password'];
+        $email = htmlspecialchars($_POST['email']);
+        $password = htmlspecialchars($_POST['password']);
 
         // Récupérer l'utilisateur depuis la base de données en fonction de l'email
         $query = "SELECT * FROM users WHERE email = :email";

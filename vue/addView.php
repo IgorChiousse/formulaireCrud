@@ -24,13 +24,13 @@ include '../controleur/add.php';
         </p>
         <form action="" method="POST">
             <label>Nom</label>
-            <input type="text" name="lastname">
+            <input type="text" name="lastname" requires maxlength="50">
             <label>Prénom</label>
-            <input type="text" name="firstname">
+            <input type="text" name="firstname" requires maxlength="50">
             <label>Email</label>
-            <input type="email" name="email">
+            <input type="email" name="email" requires maxlength="100">
             <label>Mot de passe</label>
-            <input type="password" name="password">
+            <input type="password" name="password" requires minlength="6">
             <input type="submit" value="S'inscrire" name="button">
         </form>
         <p>Vous avez deja un compte : <a href="../vue/loginView.php">S'identifier</a></p>

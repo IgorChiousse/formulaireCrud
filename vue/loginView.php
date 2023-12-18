@@ -19,9 +19,9 @@ include_once '../controleur/login.php';
         </p>
         <form action="" method="POST">
             <label>Email</label>
-            <input type="email" name="email" value="">
+            <input type="email" name="email" required maxlength="50" value="">
             <label>Mot de passe</label>
-            <input type="password" name="password" value="">
+            <input type="password" name="password" required minlength="100" value="">
             <input type="submit" value="Entrer" name="button">
         </form>
         <p>Vous n'avez pas de compte ? : <a href="../vue/addView.php">Inscription</a></p>

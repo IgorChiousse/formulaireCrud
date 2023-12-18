@@ -22,13 +22,13 @@ include '../controleur/connexion.php';
         </p>
         <form action="" method="POST">
             <label>Nom</label>
-            <input type="text" name="lastname" value="<?php echo $user['lastname']?>">
+            <input type="text" name="lastname" requires maxlength="50" value="<?php echo $user['lastname']?>">
             <label>Prénom</label>
-            <input type="text" name="firstname" value="<?php echo $user['firstname']?>">
+            <input type="text" name="firstname" requires maxlength="50" value="<?php echo $user['firstname']?>">
             <label>Email</label>
-            <input type="email" name="email" value="<?php echo $user['email']?>">
+            <input type="email" name="email" requires maxlength="100" value="<?php echo $user['email']?>">
             <label>Mot de passe</label>
-            <input type="password" name="password" value="<?php echo $user['password']?>">
+            <input type="password" name="password" requires minlength="6" value="<?php echo $user['password']?>">
             <input type="submit" value="Ajouter" name="button">
         </form>
         
